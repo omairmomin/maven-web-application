@@ -9,7 +9,7 @@ git 'https://github.com/omairmomin/maven-web-application.git'
 stage ('build'){
 sh "$mavenHome/bin/mvn clean package"
 }
-
+/*
 //genrate sonarqube report
 
 stage ('sonarqube report'){
@@ -22,5 +22,5 @@ sh "$mavenHome/bin/mvn sonar:sonar"
 stage ('upload artifact into nexus'){
 sh "$mavenHome/bin/mvn deploy"
 }
-
+*/
 }// node closeing
