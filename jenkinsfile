@@ -5,6 +5,7 @@ echo " the node name is  ${env.node_name} "
 echo "the job name is    ${env.job_name} "
 echo "the build number is ${env.build_number} "
 properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5'))])
+properties([pipelineTriggers([pollSCM('* * * * *')])])
 // checkout stage                                       
 stage ('checkoutcode'){
 git 'https://github.com/omairmomin/maven-web-application.git'
